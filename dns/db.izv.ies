@@ -1,0 +1,20 @@
+$TTL 86400
+$ORIGIN izv.ies.
+@   IN  SOA izv.ies. root.izv.ies. (
+        2025030301 ; Serial
+        3600       ; Refresh
+        1800       ; Retry
+        604800     ; Expire
+        86400      ; Minimum TTL
+    )
+
+@       IN      NS      dns.izv.ies.
+
+dns		IN		A		192.168.57.10
+mail	IN		A		192.168.57.20
+
+@		IN		MX		10 mail
+
+smtp IN  CNAME mail
+pop  IN  CNAME mail
+imap IN  CNAME mail

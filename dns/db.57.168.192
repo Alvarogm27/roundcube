@@ -1,0 +1,14 @@
+$TTL 86400
+$ORIGIN 57.168.192.in-addr.arpa.
+@   IN  SOA izv.ies. root.izv.ies. (
+        2025030301 ; Serial
+        3600       ; Refresh
+        1800       ; Retry
+        604800     ; Expire
+        86400      ; Minimum TTL
+    )
+
+@    IN  NS  dns.izv.ies.
+
+10   IN  PTR dns.izv.ies.
+20   IN  PTR mail.izv.ies.
