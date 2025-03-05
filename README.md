@@ -1,4 +1,5 @@
 Agregar linea "nameserver 127.0.0.1" a etc/resolv.conf.
+
 Editar el archivo /etc/systemd/resolved.conf:
 
 sudo nano /etc/systemd/resolved.conf
