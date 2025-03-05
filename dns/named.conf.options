@@ -1,12 +1,13 @@
 options {
-	directory "/var/cache/bind";
+    directory "/var/cache/bind";
 
     listen-on { 192.168.57.10; };
-        forwarders {
+    forwarders {
         1.1.1.1;
         8.8.8.8;
+        8.8.4.4;
     };
 
-	dnssec-validation yes;
-	listen-on { any; };
+    dnssec-validation auto;
+    listen-on { any; };
 };

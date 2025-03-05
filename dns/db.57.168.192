@@ -1,14 +1,12 @@
 $TTL 86400
 $ORIGIN 57.168.192.in-addr.arpa.
-@   IN  SOA izv.ies. root.izv.ies. (
-        2025030301 ; Serial
-        3600       ; Refresh
-        1800       ; Retry
-        604800     ; Expire
-        86400      ; Minimum TTL
-    )
+@    IN    SOA   dns.izv.ies. root.izv.ies. (
+                 2025030501 ; Serial
+                 604800     ; Refresh
+                 86400      ; Retry
+                 2419200    ; Expire
+                 86400 )    ; Negative Cache TTL
 
-@    IN  NS  dns.izv.ies.
+@    IN    NS    dns.izv.ies.
 
-10   IN  PTR dns.izv.ies.
-20   IN  PTR mail.izv.ies.
+20   IN    PTR   mail.izv.ies.
