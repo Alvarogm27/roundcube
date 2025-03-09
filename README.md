@@ -65,14 +65,23 @@ Email recieved by mengano in her inbox.
 Double click to acces to the email and see what's inside.
 ![Roundcube](./assets/email-inside.png)
 
-Editar el archivo /etc/systemd/resolved.conf:
+## Possible network error
 
-sudo nano /etc/systemd/resolved.conf
+### Port 53 assigned:
 
-Agregar o editar la siguiente línea para que systemd-resolved use otro puerto:
+If your getting troubles to deploy the containers, more specifically the "dns" one it could be due to the port 53 it is already assign to systemd
 
+#### Solution:
+
+Edit systemd resolved.conf
+```bash
+nano /etc/systemd/resolved.conf:
+```
+
+Add or edit this line to let systemd use another port:
 DNSStubListener=no
 
-Reiniciar el servicio:
-
+Restart the service:
+```bash
 sudo systemctl restart systemd-resolved
+```
